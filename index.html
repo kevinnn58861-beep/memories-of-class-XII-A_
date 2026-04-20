@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMORIES XII A</title>
+    <style>
+        :root { --bg: #050810; --accent: #00d2ff; --card: #111827; --text: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; }
+        
+        /* Overlay Awal */
+        #pintu-masuk { position: fixed; inset: 0; background: var(--bg); z-index: 10000; display: flex; justify-content: center; align-items: center; text-align: center; }
+        .btn-masuk { padding: 15px 40px; background: var(--accent); border: none; border-radius: 50px; cursor: pointer; font-weight: bold; color: #000; font-size: 1.1rem; }
+
+        .hero { padding: 40px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; letter-spacing: 3px; }
+
+        /* Audio Player Manual */
+        .audio-box { max-width: 400px; margin: 0 auto 30px; background: #1a2235; padding: 15px; border-radius: 15px; border: 1px solid var(--accent); text-align: center; }
+        .audio-box p { font-size: 0.8rem; margin-bottom: 10px; color: var(--accent); font-weight: bold; }
+        audio { width: 100%; height: 35px; }
+
+        /* Menu */
+        .menu-container { display: flex; justify-content: center; gap: 10px; margin: 20px auto; max-width: 500px; padding: 0 20px; }
+        .btn-menu { flex: 1; padding: 12px; background: #0f172a; border: 1px solid var(--accent); color: white; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 0.9rem; }
+        .btn-menu:active { background: var(--accent); color: black; }
+
+        /* Galeri */
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; display: none; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; }
+        .card { background: #111827; border-radius: 8px; overflow: hidden; aspect-ratio: 1/1; border: 1px solid rgba(255,255,255,0.05); }
+        img, video { width: 100%; height: 100%; object-fit: cover; }
+        
+        h2 { margin-bottom: 20px; color: var(--accent); text-align: center; font-size: 1.2rem; }
+        footer { text-align: center; padding: 40px; opacity: 0.3; font-size: 0.7rem; }
+    </style>
+</head>
+<body>
+
+    <div id="pintu-masuk">
+        <div>
+            <h1 style="margin-bottom: 10px;">XII A</h1>
+            <p style="margin-bottom: 25px; opacity: 0.6;">Resilience Forty</p>
+            <button class="btn-masuk" onclick="bukaWeb()">MASUK KENANGAN ✨</button>
+        </div>
+    </div>
+
+    <header class="hero">
+        <h1>XII A</h1>
+        <p>MEMORIES OF RESILIENCE FORTY</p>
+    </header>
+
+    <div class="audio-box">
+        <p>🎵 SEKARANG MEMUTAR: PERUNGGU - 33x</p>
+        <audio id="audioManual" controls loop>
+            <source src="perunggu.mp3.mp3" type="audio/mpeg">
+            Browser kamu tidak mendukung pemutar musik ini.
+        </audio>
+    </div>
+
+    <div class="menu-container">
+        <button class="btn-menu" onclick="gantiTab('foto')">LIHAT FOTO</button>
+        <button class="btn-menu" onclick="gantiTab('video')">LIHAT VIDEO</button>
+    </div>
+
+    <div id="tab-foto" class="container">
+        <h2>Galeri Foto (83)</h2>
+        <div class="grid">
+            <div class="card"><img src="xiia-foto1.jpg"></div><div class="card"><img src="xiia-foto2.jpg"></div>
+            <div class="card"><img src="xiia-foto3.jpg"></div><div class="card"><img src="xiia-foto4.jpg"></div>
+            <div class="card"><img src="xiia-foto5.jpg"></div><div class="card"><img src="xiia-foto6.jpg"></div>
+            <div class="card"><img src="xiia-foto7.jpg"></div><div class="card"><img src="xiia-foto8.jpg"></div>
+            <div class="card"><img src="xiia-foto9.jpg"></div><div class="card"><img src="xiia-foto10.jpg"></div>
+            <div class="card"><img src="xiia-foto11.jpg"></div><div class="card"><img src="xiia-foto12.jpg"></div>
+            <div class="card"><img src="xiia-foto13.jpg"></div><div class="card"><img src="xiia-foto14.jpg"></div>
+            <div class="card"><img src="xiia-foto15.jpg"></div><div class="card"><img src="xiia-foto16.jpg"></div>
+            <div class="card"><img src="xiia-foto17.jpg"></div><div class="card"><img src="xiia-foto18.jpg"></div>
+            <div class="card"><img src="xiia-foto19.jpg"></div><div class="card"><img src="xiia-foto20.jpg"></div>
+            <div class="card"><img src="xiia-foto21.jpg"></div><div class="card"><img src="xiia-foto22.jpg"></div>
+            <div class="card"><img src="xiia-foto23.jpg"></div><div class="card"><img src="xiia-foto24.jpg"></div>
+            <div class="card"><img src="xiia-foto25.jpg"></div><div class="card"><img src="xiia-foto26.jpg"></div>
+            <div class="card"><img src="xiia-foto27.jpg"></div><div class="card"><img src="xiia-foto28.jpg"></div>
+            <div class="card"><img src="xiia-foto29.jpg"></div><div class="card"><img src="xiia-foto30.jpg"></div>
+            <div class="card"><img src="xiia-foto31.jpg"></div><div class="card"><img src="xiia-foto32.jpg"></div>
+            <div class="card"><img src="xiia-foto33.jpg"></div><div class="card"><img src="xiia-foto34.jpg"></div>
+            <div class="card"><img src="xiia-foto35.jpg"></div><div class="card"><img src="xiia-foto36.jpg"></div>
+            <div class="card"><img src="xiia-foto37.jpg"></div><div class="card"><img src="xiia-foto38.jpg"></div>
+            <div class="card"><img src="xiia-foto39.jpg"></div><div class="card"><img src="xiia-foto40.jpg"></div>
+            <div class="card"><img src="xiia-foto41.jpg"></div><div class="card"><img src="xiia-foto42.jpg"></div>
+            <div class="card"><img src="xiia-foto43.jpg"></div><div class="card"><img src="xiia-foto44.jpg"></div>
+            <div class="card"><img src="xiia-foto45.jpg"></div><div class="card"><img src="xiia-foto46.jpg"></div>
+            <div class="card"><img src="xiia-foto47.jpg"></div><div class="card"><img src="xiia-foto48.jpg"></div>
+            <div class="card"><img src="xiia-foto49.jpg"></div><div class="card"><img src="xiia-foto50.jpg"></div>
+            <div class="card"><img src="xiia-foto51.jpg"></div><div class="card"><img src="xiia-foto52.jpg"></div>
+            <div class="card"><img src="xiia-foto53.jpg"></div><div class="card"><img src="xiia-foto54.jpg"></div>
+            <div class="card"><img src="xiia-foto55.jpg"></div><div class="card"><img src="xiia-foto56.jpg"></div>
+            <div class="card"><img src="xiia-foto57.jpg"></div><div class="card"><img src="xiia-foto58.jpg"></div>
+            <div class="card"><img src="xiia-foto59.jpg"></div><div class="card"><img src="xiia-foto60.jpg"></div>
+            <div class="card"><img src="xiia-foto61.jpg"></div><div class="card"><img src="xiia-foto62.jpg"></div>
+            <div class="card"><img src="xiia-foto63.jpg"></div><div class="card"><img src="xiia-foto64.jpg"></div>
+            <div class="card"><img src="xiia-foto65.jpg"></div><div class="card"><img src="xiia-foto66.jpg"></div>
+            <div class="card"><img src="xiia-foto67.jpg"></div><div class="card"><img src="xiia-foto68.jpg"></div>
+            <div class="card"><img src="xiia-foto69.jpg"></div><div class="card"><img src="xiia-foto70.jpg"></div>
+            <div class="card"><img src="xiia-foto71.jpg"></div><div class="card"><img src="xiia-foto72.jpg"></div>
+            <div class="card"><img src="xiia-foto73.jpg"></div><div class="card"><img src="xiia-foto74.jpg"></div>
+            <div class="card"><img src="xiia-foto75.jpg"></div><div class="card"><img src="xiia-foto76.jpg"></div>
+            <div class="card"><img src="xiia-foto77.jpg"></div><div class="card"><img src="xiia-foto78.jpg"></div>
+            <div class="card"><img src="xiia-foto79.jpg"></div><div class="card"><img src="xiia-foto80.jpg"></div>
+            <div class="card"><img src="xiia-foto81.jpg"></div><div class="card"><img src="xiia-foto82.jpg"></div>
+            <div class="card"><img src="xiia-foto83.jpg"></div>
+        </div>
+    </div>
+
+    <div id="tab-video" class="container">
+        <h2>Galeri Video (33)</h2>
+        <div class="grid">
+            <div class="card"><video controls src="xiia-video1.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video2.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video3.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video4.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video5.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video6.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video7.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video8.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video9.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video10.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video11.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video12.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video13.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video14.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video15.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video16.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video17.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video18.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video19.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video20.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video21.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video22.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video23.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video24.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video25.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video26.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video27.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video28.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video29.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video30.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video31.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video32.mp4"></video></div>
+            <div class="card"><video controls src="xiia-video33.mp4"></video></div>
+        </div>
+    </div>
+
+    <footer><p>XII A Resilience Forty &copy; 2026</p></footer>
+
+    <script>
+        function bukaWeb() {
+            document.getElementById('pintu-masuk').style.display = 'none';
+            // Lagu diputar manual lewat audio player di layar utama
+            document.getElementById('audioManual').play();
+        }
+
+        function gantiTab(nama) {
+            document.getElementById('tab-foto').style.display = 'none';
+            document.getElementById('tab-video').style.display = 'none';
+            document.getElementById('tab-' + nama).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
